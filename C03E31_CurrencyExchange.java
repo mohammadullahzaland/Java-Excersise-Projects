@@ -1,0 +1,65 @@
+/* 
+  3.31 (Financials: currency exchange) Write a program that prompts the user to enter
+  the exchange rate from currency in U.S. dollars to Chinese RMB. Prompt the
+  user to enter 0 to convert from U.S. dollars to Chinese RMB and 1 to convert
+  from Chinese
+  RMB to U.S. dollars. Prompt the user to enter the amount in U.S.
+  dollars or Chinese RMB to convert it to Chinese RMB or U.S. dollars, respectively.
+  Here are the sample runs:
+  
+  Enter the exchange rate from dollars to RMB: 6.81
+Enter 0 to convert dollars to RMB and 1 vice versa: 0
+Enter the dollar amount: 100
+$100.0 is 681.0 yuan
+
+Enter the exchange rate from dollars to RMB: 6.81
+Enter 0 to convert dollars to RMB and 1 vice versa: 1
+Enter the RMB amount: 10000
+10000.0 yuan is $1468.43
+
+Enter the exchange rate from dollars to RMB: 6.81
+Enter 0 to convert dollars to RMB and 1 vice versa: 5
+CIncorrect input
+*/
+import java.util.Scanner;
+public class C03E31_CurrencyExchange
+{
+  public static void main(String[] args)
+  {
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("which currency do you want to enter there are tow choices:");
+    System.out.println("Enter 0 to chage doller to chinese RBM");
+    System.out.println("Enter 1 to chage chinese RBM to doller");
+    int choice = input.nextInt();
+
+    if (choice == 0)
+    {
+      System.out.println("Enter the exchange rate from $ to RBM ");
+      double eR = input.nextDouble();
+
+      System.out.println("input the amount of doolors youwant to convert it to chinese RBM");
+      int d = input.nextInt();
+      double y = d * eR;
+      System.out.println( d + " $ = " + y + " yuan");
+    }
+
+    else if (choice == 1)
+    {
+      System.out.println("Enter the exchange rate from RBM to $");
+      double eR = input.nextDouble();
+
+      System.out.println("input the amount of yuan you want to convert it to dollors");
+      int y = input.nextInt();
+      double d = y * 1.46842;
+      System.out.println( y + " yuan = " + d + " $");
+    }
+
+    else 
+    {
+      System.out.println("Invalid input!");
+      System.out.println("Enter 0 to chage doller to chinese RBM");
+      System.out.println("Enter 1 to chage chinese RBM to doller");
+    }
+  }
+}

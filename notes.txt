@@ -1,0 +1,17 @@
+C03E003 is not done
+C03E010 is not done
+C03E011 small problem
+C03E013 is not done
+C03E021 Needs debugging
+C03E024 is not done
+C03E025 is not done
+C03E026 small problem
+C03E026 small problem
+C03E030 is not done
+C03E035 is not done
+
+
+
+
+
+
